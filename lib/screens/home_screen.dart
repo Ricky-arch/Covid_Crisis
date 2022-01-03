@@ -22,7 +22,7 @@ class _HomeScreenState extends State<HomeScreen> {
   var i;
   Map worldData;
   fetchWorldWideData() async {
-    http.Response response = await http.get('https://corona.lmao.ninja/all');
+    http.Response response = await http.get('https://corona.lmao.ninja/v3/covid-19/all');
     setState(() {
       worldData = json.decode(response.body);
     });
